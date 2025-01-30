@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <locale>
+#include "calculate-memo.hpp"
+
 using namespace std;
 
 
@@ -15,7 +17,7 @@ char str[] = {'h', 'e', 'l', 'l', 'o'};
 char str2[] = {'h', 'e', 'l', 'l', 'o', '\0'};
 
 char str3[] = "Hello World";
-wchar_t str3[] = L"Hello World"; //유니코드
+wchar_t str4[] = L"Hello World"; //유니코드
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -26,7 +28,13 @@ int main(int argc, const char * argv[]) {
 //    cout << wch << endl;
     wcout << wch << endl;
     wcout.imbue(locale("ko_KR.UTF-8"));
+    
     cout << str << endl;
+    cout << str2 << endl;
+    cout << str3 << endl;
+    wcout << str4 << endl;
+    
+    PrintHelloWorld();
     
     return 0;
     
